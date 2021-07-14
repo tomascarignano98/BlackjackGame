@@ -1,14 +1,17 @@
 @import "./normalize.css";
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   background-image: url("/images/table.png");
   background-size: cover;
-  text-align: center;
-  font-weight: bold;
   color: #fff;
-  font-size: 32px;
+  font-family: "Trebuchet MS", "Lucida Sans", Arial, sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 h1 {
@@ -17,4 +20,13 @@ h1 {
 
 #message-el {
   font-style: italic;
+}
+
+button {
+  background-color: goldenrod;
+  border-radius: 0.7rem;
+  border: 0;
+  color: #016f32;
+  font-weight: bold;
+  padding: 1rem 7.5rem;
 }
