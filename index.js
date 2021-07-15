@@ -1,5 +1,5 @@
-let firstCard = 10;
-let secondCard = 4;
+let firstCard = getRadonmCard();
+let secondCard = getRadonmCard();
 const cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
@@ -9,6 +9,10 @@ let message = "";
 const messageEl = document.querySelector("#message-el");
 const sumEl = document.querySelector("#sum-el");
 const cardsEl = document.querySelector("#cards-el");
+
+function getRadonmCard() {
+  return Math.floor(Math.random() * 11) + 1;
+}
 
 function startGame() {
   renderGame();
@@ -31,7 +35,7 @@ function renderGame() {
 }
 
 function newCard() {
-  const card = 5;
+  const card = getRadonmCard();
   cards.push(card);
   sum += card;
 
