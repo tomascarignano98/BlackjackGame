@@ -45,9 +45,11 @@ function renderGame() {
 }
 
 function newCard() {
-  const card = getRandomCard();
-  cards.push(card);
-  sum += card;
+  if (isAlive && !hasBlackJack) {
+    const card = getRandomCard();
+    cards.push(card);
+    sum += card;
 
-  renderGame();
+    renderGame();
+  }
 }
