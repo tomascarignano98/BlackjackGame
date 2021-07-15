@@ -1,20 +1,30 @@
-let firstCard = getRadonmCard();
-let secondCard = getRadonmCard();
-const cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+let cards = [];
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
 
 const messageEl = document.querySelector("#message-el");
 const sumEl = document.querySelector("#sum-el");
 const cardsEl = document.querySelector("#cards-el");
 
-function getRadonmCard() {
-  return Math.floor(Math.random() * 11) + 1;
+function getRandomCard() {
+  const number = Math.floor(Math.random() * 13) + 1;
+
+  if (number > 10) return 10;
+  if (number === 1) return 11;
+  return number;
 }
 
 function startGame() {
+  isAlive = true;
+
+  const firstCard = getRandomCard();
+  const secondCard = getRandomCard();
+  cards = [firstCard, secondCard];
+
+  sum = firstCard + secondCard;
+
   renderGame();
 }
 
@@ -35,7 +45,7 @@ function renderGame() {
 }
 
 function newCard() {
-  const card = getRadonmCard();
+  const card = getRandomCard();
   cards.push(card);
   sum += card;
 
