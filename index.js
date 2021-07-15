@@ -10,6 +10,10 @@ const sumEl = document.querySelector("#sum-el");
 const cardsEl = document.querySelector("#cards-el");
 
 function startGame() {
+  renderGame();
+}
+
+function renderGame() {
   sumEl.textContent = `Sum: ${sum}`;
   cardsEl.textContent = `Cards: ${firstCard} ${secondCard}`;
 
@@ -23,4 +27,11 @@ function startGame() {
     isAlive = false;
   }
   messageEl.textContent = message;
+}
+
+function newCard() {
+  const card = 5;
+  sum += card;
+
+  renderGame();
 }

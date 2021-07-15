@@ -28,5 +28,7 @@ button {
   border: 0;
   color: #016f32;
   font-weight: bold;
-  padding: 1rem 7.5rem;
+  margin: 0.5rem 0;
+  padding: 1rem 0;
+  width: 30rem;
 }
